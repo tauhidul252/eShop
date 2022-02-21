@@ -63,7 +63,7 @@ Widget buildBottomPart(){
     height: 300,
     child: Column(mainAxisAlignment: MainAxisAlignment.end,
     children: [
-      Text("OR Sign In With Social Network",
+      Text("Or Sign In With Social Network",
       style: LoginScreenStylies.signInSocialStylies,
       ),
       SizedBox(height: 5,),
@@ -86,6 +86,7 @@ Widget buildBottomPart(){
               width: 45,
             ),
           ),
+          
           //Google Social login button.
           MaterialButton(
             shape: OutlineInputBorder(
@@ -102,7 +103,7 @@ Widget buildBottomPart(){
               width: 45,
             ),
           ),
-          
+
           //Twiter Social login button.
           MaterialButton(
             shape: OutlineInputBorder(
