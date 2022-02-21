@@ -6,4 +6,8 @@ class LoginScreenStylies{
     color: AppColors.baseBlackColor,
     fontSize: 18,
   );
+  static const TextStyle signInSocialStylies=TextStyle(
+    color: AppColors.baseBlackColor,
+  );
 }
+
