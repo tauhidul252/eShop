@@ -1,4 +1,5 @@
 import 'package:eshop/appColors/app_colors.dart';
+import 'package:eshop/stylies/login_screen_stylies.dart';
 import 'package:eshop/widgets/my_button_widget.dart';
 import 'package:eshop/widgets/my_textfromefield_widget.dart';
 import 'package:flutter/material.dart';
@@ -38,11 +39,20 @@ Widget buildTopPart(){
               Expanded(child: MyButtonwidget(
         
                 color: AppColors.baseBlackColor,
-                onPress: (){}, text: 'Login',
+                onPress: (){}, text: 'Sign In ',
+              ),
+              ),
+              SizedBox(width: 20,),
+              Expanded(child: MyButtonwidget(
+        
+                color: AppColors.baseBlackColor,
+                onPress: (){}, text: 'Sign Up',
               ),
               ),
           ]),
         ),
+        SizedBox(height: 20,),
+        Text("Reset Your Password",style: LoginScreenStylies.resetPasswordStylies,)
     ],
   );
 }

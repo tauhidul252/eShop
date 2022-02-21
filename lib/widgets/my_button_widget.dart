@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyButtonWidget extends StatelessWidget {
-  final String text;
-  final Color color;
-  final Function onPress;
-  MyButtonWidget({this.text, this.color, this.onPress});
+class MyButtonwidget extends StatelessWidget {
+final String text;
+final Color color;
+final VoidCallback onPress;
+const MyButtonwidget({required this.text,required this.color,required this.onPress});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,16 +16,17 @@ class MyButtonWidget extends StatelessWidget {
         shape: OutlineInputBorder(
           borderRadius: BorderRadius.circular(5),
           borderSide: BorderSide.none,
-        ),
-        onPressed: onPress,
+          ),
+        onPressed:onPress,
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 20,
             color: Colors.white,
-          ),
+           ),), 
         ),
-      ),
     );
   }
+
+  
 }
