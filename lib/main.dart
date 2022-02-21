@@ -1,4 +1,5 @@
 import 'package:eshop/screen/loginScreen/login_screen.dart';
+import 'package:eshop/screen/signUp/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:eshop/widgets/my_textfromefield_widget.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: SignupScreen(),
     );
   }
 }
