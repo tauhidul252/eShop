@@ -23,7 +23,15 @@ class SignUpScreenStylies{
    fontSize: 16,
    color: AppColors.baseBlackColor,
   );
-  
+  //signUpStylies Of Use Stylies
+   static const TextStyle signUpStylies=TextStyle(
+   color: AppColors.baseBlackColor,
+  );
+  //signUpButton Of Use Stylies
+   static const TextStyle signUpButton=TextStyle(
+   color: AppColors.baseGrey10Color,
+   fontSize: 20,
+  );
   
 }
 

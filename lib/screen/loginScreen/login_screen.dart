@@ -8,7 +8,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginScreen extends StatefulWidget {
 
-
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -126,6 +125,7 @@ Widget buildBottomPart(){
     ],),
   );
 }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
