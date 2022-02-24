@@ -1,4 +1,6 @@
 import 'package:eshop/appColors/app_colors.dart';
+import 'package:eshop/routes/routes.dart';
+import 'package:eshop/screen/loginScreen/login_screen.dart';
 import 'package:eshop/stylies/signup_screen_style.dart';
 import 'package:eshop/svgImges/svg_images.dart';
 import 'package:eshop/widgets/my_button_widget.dart';
@@ -7,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SignupScreen extends StatelessWidget {
+
+
 
   Widget buildTopPart(){
     return Column(
@@ -169,6 +173,10 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: SafeArea(child: ListView(
         physics: BouncingScrollPhysics(),
       children: [

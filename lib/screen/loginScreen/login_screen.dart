@@ -1,4 +1,6 @@
 import 'package:eshop/appColors/app_colors.dart';
+import 'package:eshop/routes/routes.dart';
+import 'package:eshop/screen/signUp/signup_screen.dart';
 import 'package:eshop/stylies/login_screen_stylies.dart';
 import 'package:eshop/svgImges/svg_images.dart';
 import 'package:eshop/widgets/my_button_widget.dart';
@@ -47,7 +49,11 @@ Widget buildTopPart(){
               Expanded(child: MyButtonwidget(
         
                 color: AppColors.baseBlackColor,
-                onPress: (){}, text: 'Sign Up',
+                onPress: (){
+                  RoutingPage.goToNextPage(
+                    context: context, 
+                    navigateTo: SignupScreen());
+                }, text: 'Sign Up',
               ),
               ),
           ]),
@@ -66,7 +72,7 @@ Widget buildBottomPart(){
       style: LoginScreenStylies.signInSocialStylies,
       ),
       SizedBox(height: 5,),
-      Padding(padding: EdgeInsets.all(20.0),
+      Padding(padding: EdgeInsets.all(10.0),
       child: Row(
         children: [
           //Facebook Social login button.
