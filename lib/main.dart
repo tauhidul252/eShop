@@ -16,10 +16,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'eShop',
       theme: ThemeData(
-        
+        appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(
+            
+          )
+        ),
         primarySwatch: Colors.blue,
       ),
-      home: SignupScreen(),
+      home: LoginScreen(),
     );
   }
 }

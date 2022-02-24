@@ -1,4 +1,6 @@
 import 'package:eshop/appColors/app_colors.dart';
+import 'package:eshop/routes/routes.dart';
+import 'package:eshop/screen/loginScreen/login_screen.dart';
 import 'package:eshop/stylies/signup_screen_style.dart';
 import 'package:eshop/svgImges/svg_images.dart';
 import 'package:eshop/widgets/my_button_widget.dart';
@@ -7,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class SignupScreen extends StatelessWidget {
+
+
 
   Widget buildTopPart(){
     return Column(
@@ -30,10 +34,11 @@ class SignupScreen extends StatelessWidget {
           hintText: "Confirm password",
               obscureText: true,
         ),
+        //Sign up button
         Container(
           margin: EdgeInsets.symmetric(
             horizontal: 20,
-            vertical: 10,
+            //vertical: 10,
           ),
           child: MyButtonwidget( 
             onPress: () { },
@@ -41,6 +46,21 @@ class SignupScreen extends StatelessWidget {
             text: "Create An Account",
           ),
         ),
+        //Login/Sign in button
+        Container(
+                 margin:EdgeInsets.all(20),
+                 child: MaterialButton(
+                   onPressed: () {},
+                   color: AppColors.baseLightOrangeColor,
+                   height: 55,
+                   elevation: 0,
+                   child: Center(
+                     child:Text("Sign In",
+                     style: SignUpScreenStylies.signUpButton,
+                     ),
+                    ),
+                   ),
+               ), 
         SizedBox(height: 20,),
         RichText(text: TextSpan(
           text: "By signing up you agree to our\n\t",
@@ -64,24 +84,6 @@ class SignupScreen extends StatelessWidget {
       ],
     );
   }
-  Widget buildSocialButton({required Widget child, required VoidCallback onPress}){
-    return MaterialButton(
-               onPressed: onPress,
-                shape: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: AppColors.baseGrey40Color,
-                    width: 0.5,
-                  ),
-                  borderRadius:BorderRadius.circular(5), 
-                ),
-                
-                child: child
-              );
-    
-    
-  } 
-
-
   Widget buildBottomPart(){
     return Container(
       height: 300,
@@ -126,19 +128,19 @@ class SignupScreen extends StatelessWidget {
                 ), 
                 ),
                 
-               Container(
-                 margin:EdgeInsets.all(20),
-                 child: MaterialButton(
-                   onPressed: () {},
-                   color: AppColors.baseLightOrangeColor,
-                   height: 55,
-                   elevation: 0,
-                   child: Center(
-                     child:Text("Sign up",
-                     style: SignUpScreenStylies.signUpButton,),
-                    ),
-                   ),
-               ), 
+              //  Container(
+              //    margin:EdgeInsets.all(20),
+              //    child: MaterialButton(
+              //      onPressed: () {},
+              //      color: AppColors.baseLightOrangeColor,
+              //      height: 55,
+              //      elevation: 0,
+              //      child: Center(
+              //        child:Text("Sign up",
+              //        style: SignUpScreenStylies.signUpButton,),
+              //       ),
+              //      ),
+              //  ), 
 
             ],
           ),
@@ -148,10 +150,33 @@ class SignupScreen extends StatelessWidget {
       ),
     );
   }
+  Widget buildSocialButton({required Widget child, required VoidCallback onPress}){
+    return MaterialButton(
+               onPressed: onPress,
+                shape: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: AppColors.baseGrey40Color,
+                    width: 0.5,
+                  ),
+                  borderRadius:BorderRadius.circular(5), 
+                ),
+                
+                child: child
+              );
+    
+    
+  } 
+
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: SafeArea(child: ListView(
         physics: BouncingScrollPhysics(),
       children: [
