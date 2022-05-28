@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'eShop',
+      title: 'eContact',
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(
@@ -27,4 +27,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

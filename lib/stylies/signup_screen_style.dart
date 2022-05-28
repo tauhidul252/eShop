@@ -7,6 +7,7 @@ class SignUpScreenStylies{
   //Sign UpScreen Stylies
   static const TextStyle signInAgressStylies=TextStyle(
     color: AppColors.baseBlackColor,
+    fontFamily: "NovaFlat",
     fontSize: 16,
   );
   //trems Agress Stylies

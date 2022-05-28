@@ -38,7 +38,7 @@ class SignupScreen extends StatelessWidget {
         Container(
           margin: EdgeInsets.symmetric(
             horizontal: 20,
-            //vertical: 10,
+            vertical: 10,
           ),
           child: MyButtonwidget( 
             onPress: () { },
@@ -181,7 +181,7 @@ class SignupScreen extends StatelessWidget {
         physics: BouncingScrollPhysics(),
       children: [
         buildTopPart(),
-        buildBottomPart(),
+        //buildBottomPart(),
       ],
       ),
       ),

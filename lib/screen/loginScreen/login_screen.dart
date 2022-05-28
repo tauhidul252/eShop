@@ -144,7 +144,7 @@ Widget buildBottomPart(){
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 buildTopPart(),
-                buildBottomPart(),
+                //buildBottomPart(),
               ],
             )
           ],
