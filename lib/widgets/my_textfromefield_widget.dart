@@ -1,10 +1,15 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class MyTextFromField extends StatelessWidget {
-  
-final String hintText;
-bool obscureText=false;
-MyTextFromField({required this.hintText,required this.obscureText});
+  final String hintText;
+  bool obscureText = false;
+
+  MyTextFromField(
+      {required this.hintText,
+      required this.obscureText,
+      TextEditingController? controller,
+      FirebaseAuth? required});
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +19,15 @@ MyTextFromField({required this.hintText,required this.obscureText});
         vertical: 10,
       ),
       child: TextFormField(
-        obscureText: obscureText,
-        decoration: InputDecoration(
-          fillColor: Colors.grey[100],
-          filled: true,
-          hintText: hintText,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(10.0)
-          )
-        )
-      ),
+          controller: TextEditingController(),
+          obscureText: obscureText,
+          decoration: InputDecoration(
+              fillColor: Colors.grey[100],
+              filled: true,
+              hintText: hintText,
+              border: OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.circular(10.0)))),
     );
   }
 }
